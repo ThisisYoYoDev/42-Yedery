@@ -1,0 +1,21 @@
+void showtab(int *tab, int size)
+{
+    int i;
+    
+    i = 0;
+    while (i < size)
+    {
+ 		printf("%d\n", tab[i]);
+        i++;
+    }
+}
+
+int main()
+{
+    int tab[5] = {9,0,-36,42,1};
+    int size = 5;
+	showtab(tab, size);
+    ft_sort_int_tab(tab, size);
+    printf("-----------------\n");
+	showtab(tab, size);
+}

@@ -1,0 +1,10 @@
+int main()
+{
+  char dest[20];
+  char src[] = "testtest\0";
+  int size = sizeof(dest);
+  ft_strlcpy(dest,src,size);
+  printf("%d\n",ft_strlcpy(dest,src,size));
+  printf("%s\n",dest);
+}
+

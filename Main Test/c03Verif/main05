@@ -1,0 +1,17 @@
+// main test ft_strlcat Si ton programme marche tu return ; "Final destination string : |This is destinationThis is source|"
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   char src[50], dest[50];
+
+   ft_strcpy(src,  "This is source");
+   ft_strcpy(dest, "This is destination");
+
+   strcat(dest, src);
+
+   printf("Final destination string : |%s|", dest);
+   
+   return(0);
+}
