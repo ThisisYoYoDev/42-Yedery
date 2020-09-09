@@ -1,0 +1,9 @@
+Credentials cache: API:A0777828-EAEB-4BD5-BBAA-CDA3A216C9E3
+        Principal: yedery@42.FR
+
+  Issued                Expires               Principal
+Aug  3 10:59:29 2020  Aug 10 10:59:29 2020  krbtgt/42.FR@42.FR
+e2r10p22% klist -l       
+    Name           Cache name                                 Expires
+* yedery@42.FR   API:A0777828-EAEB-4BD5-BBAA-CDA3A216C9E3   Aug 10 10:59:29 2020
+  yedery@42.FR   API:9A8BB164-2A6A-4CE6-B437-5D63A59F24A5   Aug 10 10:08:14 2020

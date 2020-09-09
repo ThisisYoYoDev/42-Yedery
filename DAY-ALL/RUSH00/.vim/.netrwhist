@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/ldeconin/Documents/shell00/ex06'
+let g:netrw_dirhist_1='/Users/ldeconin/Documents/shell00'
+let g:netrw_dirhist_0='/Users/ldeconin/Documents'
+let g:netrw_dirhist_9='/Users/ldeconin/Documents/.gitignore'
+let g:netrw_dirhist_8='/Users/ldeconin/Documents'
+let g:netrw_dirhist_7='/Users/ldeconin/Documents/.gitignore'
+let g:netrw_dirhist_6='/Users/ldeconin/Documents/shell00/ex06'
+let g:netrw_dirhist_5='/Users/ldeconin/Documents/shell00'
+let g:netrw_dirhist_4='/Users/ldeconin/Documents'
+let g:netrw_dirhist_3='/Users/ldeconin/Documents/.gitignore'
