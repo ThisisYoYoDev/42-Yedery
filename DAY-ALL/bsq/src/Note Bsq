@@ -1,0 +1,157 @@
+Usage  & algo du bsq
+// NE PAS METTRE LES VALEURS STOCKS
+// on a que la hauteur
+// char a prendre dans la premiere ligne du gen
+i <
+
+Check_square : // Ft_Check_all_Square
+
+arg ; taille, **map, largeur, hauteur, et de coo x,y
+
+deux valeur int i,j.     i = x, j = y
+
+Double Boucle
+{
+	i < Taille && i + x < largeur
+	// same for j
+}
+		|-> si map[x,y] != "." // si cest pas vide - rt(0)
+			sinon incremente nos boucle
+
+If (i == taille && j == taille) // si le carre est vide
+		-> rt(1) 
+else 
+		rt(0)
+
+
+
+Try_Square : // essaye le plus grand carre dans des coordonnee
+type void no rt
+arg : **map, largeur, hauteur, coox, cooy, *x , *y, *maxsquare
+
+	val int taille
+
+	taille = 1;
+	tant que nous analyson  tout les carre, on incremente la taille.
+	ensuite on decremente car la taille aus dessus est fausse.
+	if la taille est > au plus grand carre
+	{
+		on affecte les nouvelle valeur dans nos coo fixe.
+	}
+
+Process_File:
+type void no rt
+
+arg ; *filename (char *)
+value fd, char c = buffer, largeur, hauteur, **map
+
+Etape 1: // Check Read File || a poffiner
+
+Regarder si le file peut etre ouvert :
+	print error if impossible
+
+buffer (c) = null;
+Tant que (read la map)
+	{
+		on calcul la hauteur et la largeur.
+	}
+ferme la map
+
+Etape 2: // Malloc_map || mapalloc
+
+Reouverture du fichier en lecture
+creer la taille de la map en fonction de la hauteur (malloc).
+nouvelle value int i = 0;
+Tant que (i < hauteur)
+	{
+	map[i] = malloc la largeur de chaque ligne + 1 (char)
+	lecture de toute la ligne et la buffer dans map[i]
+	finir avec la \0
+	incremente
+	}
+ferme le fichier
+
+Etape 3: // find the biggest square || check with a map 1 1 1 
+
+new value int x,y, maxsquare initalise a = 0 les value + i = 0.  int j = 0
+
+Tant que (i + maxsquare < hauteur)
+	{
+	j = 0
+	tant que (j + maxsqure < largeur)
+		{
+			Try_Square(map, largeur, hauteur, i, j, x, y, maxsquare)
+			j++
+		}
+		i++
+	}
+
+Etape 4: // fill the square with a char. 
+
+i = 0
+Tant Que (i  < maxsquare) // draw the sqare
+	{
+		j = 0
+		tant que (j < maxsquare) 
+			{
+				map[i + x][j + y] = 'x' // valeur non stocks de remplissage (a definir)
+				j++
+			}
+		i++
+	}
+
+Etape 5 : // pb potentiel d'affichage ce coordonnee
+
+i = 0
+Tant Que (i < Hauteur)
+	{
+		j = 0;
+		Tant Que (j < Largeur)
+			{
+				affiche en fonction de map[i][j]
+				j++
+			}
+		print (\n)
+		i++
+	}
+	print (\n)
+
+Etape 6 : // ft_free
+i = 0
+Tant Que (i < Hauteur)
+	{
+	free(map[i]) // eviter tout leaks
+	i++;
+	}
+free(map);
+
+ft_process file
+
+ft_check first line
+
+ft-check map
+	(toute les lignes meme longueur)
+	(juste les cara donne par first line)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
